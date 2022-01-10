@@ -56,11 +56,7 @@ section .searchBox .icons {
 }
 
 section .searchBox .icons img {
-    /* max-width: 100%; */
-}
-
-section.warp .main .button {
-    margin-top: 20px;
+    max-width: 100%;
 }
 
 section.wrap .main .searchBtn, section.wrap .main .FeelingLucky {
