@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5502/index.html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- reset.css -->
+    
+
+    <!-- custom css -->
+    
+
+    <!-- custom js -->
+    <script src="./Document_files/app.js" defer=""></script>
+
+<link rel="stylesheet" href="./Document_files/reset.min.css"><link rel="stylesheet" href="./Document_files/main.css"></head>
+<body>
+    <div class="wrap">
+        
+        <div class="user-form" id="form">
+            <div class="logo">
+                <img src="./Document_files/img2.png" alt="">
+            </div>
+            <div class="search-box">
+                <input type="text" id="search" placeholder="깃허브 유저 검색" autocomplete="off">
+                <div class="search-img">
+                    <img src="./Document_files/search.png" alt="" width="20" height="20">
+                </div>
+            </div>
+        </div>
+
+        <section id="main">
+            <div class="card">
+                <div>
+                    <img src="./Document_files/img1.png" class="avatar">
+                </div>
+                <div class="user-info">
+                    <h2 id="user-id">1nwi</h2>
+                    <p id="user-name">
+                        1nwi
+                    </p>
+                    <ul>
+                        <li><p id="followers">30</p> <strong>Fallowers</strong></li>
+                        <li><p id="following">30</p> <strong>Fallowing</strong></li>
+                        <li><p id="public-repos">10</p> <strong>Repos</strong></li>
+                    </ul>
+                    <div class="repos">
+                        <a href="http://127.0.0.1:5502/index.html#" class="repo">저장소 1</a>
+                        <a href="http://127.0.0.1:5502/index.html#" class="repo">저장소 2</a>
+                        <a href="http://127.0.0.1:5502/index.html#" class="repo">저장소 3</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>
