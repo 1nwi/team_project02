@@ -1,4 +1,6 @@
 
+
+const URL = 'https://api.github.com/users';
 // 메인 로고 누르면 깃허브 홈페이지로 가는 함수
 function mainGithub () {
     
@@ -10,10 +12,19 @@ function mainGithub () {
     });
 }
 
+function getUser() {
 
-//프로필 사진 렌더링람수
-function renderingPhoto() {
-    
+    fetch(`https://api.github.com/users`)
+        .then(res => {
+            console.log(res);
+            if (res.status === 200) {
+                return res.json();
+            } else {
+                alert('통신 실패!');
+                return null;
+            }     
+        });
+        
 }
 
 
@@ -21,4 +32,5 @@ function renderingPhoto() {
 
 (function() {
     mainGithub();
+    getUser();
 })();
